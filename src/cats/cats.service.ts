@@ -9,6 +9,10 @@ export class CatsService {
     return this.cats;
   }
 
+  geCat(catID: number) {
+    return this.cats.filter(cat => cat.id == catID);
+  }
+
   createCat(cat: Cat) {
     this.cats = [ ...this.cats, {...cat}];
   }
